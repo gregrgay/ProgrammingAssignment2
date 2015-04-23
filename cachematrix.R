@@ -49,7 +49,6 @@ cacheSolve <- function(x, ...) {
     inv
 }
 
-
 #####
 # Extra function to run everything. At the prompt type:
 # >test()
@@ -57,6 +56,7 @@ cacheSolve <- function(x, ...) {
 # >test(y) # where y is an existing invertable matrix 
 #####
 test = function(y = matrix()){
+    
     ## create a matrix if we don't already have one
     if(length(y) > 1){
         message("Good matrix exists, so we'll use it")
@@ -64,6 +64,7 @@ test = function(y = matrix()){
         message("Matrix does not exist so lets create one")
         y <<- matrix(rnorm(10000), nrow=100, ncol=100)  #create a matrix first
     }
+    
     ##  create cachable/invertible matrix
     cmatrix = makeCacheMatrix(y)
     
@@ -87,6 +88,3 @@ test = function(y = matrix()){
 
 # To test makeCacheMatrix and cacheSolve pass an existing matrix
 # to the test(y) function, or leave test() empty to go with the default
-
-# then run everything
-# > test()  # run the test function, pass in optional matrix
