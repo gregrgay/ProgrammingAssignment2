@@ -1,7 +1,10 @@
 ## The functions here take an invertable matrix and caches it for 
 ## future use. To test, load this file into memory and run test()
 
+## originally forked from rdpeng/ProgrammingAssignment2
+## most of makeCacheMatrix() is based on makeVector() in the assignment instructions
 ## This function creates a special "matrix" object that can cache its inverse.
+##
 makeCacheMatrix <- function(x = matrix()) {
     ## x is a square invertible matrix
     ## returns a list containing functions to
